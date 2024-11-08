@@ -1,3 +1,3 @@
 # Proyecto de Grado UD
 
-## Arquitectura cliente/servidor
+## Arquitectura monolitica
