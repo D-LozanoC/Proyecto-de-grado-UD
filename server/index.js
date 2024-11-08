@@ -1,12 +1,15 @@
-const express = require('express')
-const app = express()
+import express from 'express'
+import morgan from 'morgan'
+import { PORT } from './config/config.js'
 
-const PORT = process.env.PORT ?? 3000
+
+const app = express()
+app.use(morgan('dev'))
 
 app.get('/', (req, res) => {
-    res.send('<h1>Bienvenido a mi server</h1>');
+    res.send('<h1>Bienvenid@ al servidor</h1>');
 })
 
 app.listen(PORT, () => {
-    console.log('Server running on port http://localhost:3000');
+    console.log(`Server running on port http://localhost:${PORT}`);
 })
