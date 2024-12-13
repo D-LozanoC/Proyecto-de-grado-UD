@@ -1,101 +1,30 @@
-import Image from "next/image";
+import './styles.css'
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <main>
+        <section className="about">
+          <h2>Acerca de Remembo</h2>
+          <p>Remembo es una aplicación diseñada para ayudar a los estudiantes a gestionar su conocimiento académico de manera eficiente. El sistema aborda problemas comunes como la curva del olvido, la desorganización de recursos de aprendizaje y la falta de métodos efectivos para el seguimiento del progreso académico.</p>
+          <p>Con funcionalidades como la organización de información, creación de flashcards, exámenes relámpago y un repositorio de conocimiento, Remembo proporciona una solución integral para administrar y reforzar el aprendizaje.</p>
+          <p>Esta herramienta está dirigida a estudiantes de la Universidad Distrital Francisco José de Caldas, pero su enfoque puede ser adaptado para beneficiar a cualquier persona interesada en optimizar su aprendizaje.</p>
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        <section className="modules">
+          <h2>Módulos de Remembo</h2>
+          <ul>
+            <li><strong>Página Web:</strong> Página principal de la aplicación. A partir de esta página los usuarios de la aplicación acceden a los diferentes módulos del sistema. Esta página contiene información general de la aplicación y los botones de acceso a los diferentes módulos.</li>
+            <li><strong>Registro:</strong> Módulo que tiene la función de administrar la información de los diferentes tipos de usuario que acceden a la aplicación.</li>
+            <li><strong>Enlaces:</strong> Módulo que tiene la función de administrar la información de enlaces a páginas, documentos y videos que contienen información relacionada con el tema de la aplicación. En cada enlace se debe contar con título, descripción y dirección.</li>
+            <li><strong>Información del Proyecto:</strong> Módulo que tiene la función de administrar la información relacionada con el proyecto como: Introducción, objetivos, descripción del funcionamiento (módulos), video de funcionamiento, manual de usuario, autores y contacto.</li>
+            <li><strong>Validación:</strong> Módulo que tiene la función de brindar acceso a las operaciones del proceso de validación: realizar encuesta, diligenciar encuesta, visualizar resultados e histórico de encuestas y resultados. El administrador del sistema debe tener la posibilidad de ejecutar varias validaciones.</li>
+            <li><strong>Procesos de Conocimiento:</strong> Módulo que tiene la función de administrar los procesos de conocimiento que conforman el ciclo de vida de gestión del conocimiento: adquirir, organizar (almacenar), difundir, transferir, aplicar y mantener.</li>
+            <li><strong>Repositorio de Conocimiento:</strong> Módulo que tiene la función de administrar el repositorio de conocimiento del sistema. El repositorio es el lugar donde los procesos de adquirir, organizar (almacenar) y mantener actúan. Además, permite a los usuarios acceder al conocimiento.</li>
+            <li><strong>Estadísticas de Uso:</strong> Módulo que tiene la función de visualizar el uso que los usuarios le están dando al sistema.</li>
+          </ul>
+        </section>
       </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+    </>
   );
 }
